@@ -1,3 +1,6 @@
+
+
+
 /* style.css - Full Dopamine-Hitting, Glowing Masterpiece for Fluxia 2.0 */
 /* 🌌 Neural Galaxy Particle Background */
 .neural-galaxy {
@@ -116,6 +119,8 @@ a {
 /* 💫 Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
 
+/* 💫 Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&display=swap');
 
 /* 🔥 HERO SECTION REFINED */
 .hero {
@@ -987,4 +992,356 @@ a {
   border-radius: 50%;
   background: #00ffee;
   box-shadow: 0 0 12px #00ffeeaa;
-  animation: pulse
+  animation: pulseNode 3s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+/* Random delays for natural vibe */
+.node:nth-child(3n) { animation-delay: 0.5s; }
+.node:nth-child(5n) { animation-delay: 1s; }
+.node:nth-child(7n) { animation-delay: 1.5s; }
+.node:nth-child(9n) { animation-delay: 2s; }
+.node:nth-child(11n) { animation-delay: 2.5s; }
+
+/* Keyframes for pulse animation */
+@keyframes pulseNode {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 1;
+    box-shadow: 0 0 25px #00ffee, 0 0 50px #00ffee88;
+  }
+}
+/* 🔮 AI Insight Cards */
+.insight-section {
+  padding: 80px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.insight-section h2 {
+  font-size: 2rem;
+  color: #00ffee;
+  text-shadow: 0 0 10px #00ffee;
+  margin-bottom: 50px;
+  animation: pulseGlow 3s infinite;
+}
+
+.insight-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.insight-card {
+  width: 240px;
+  height: 160px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s ease;
+  transform-style: preserve-3d;
+}
+
+.insight-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #00ffee55;
+  backdrop-filter: blur(8px);
+}
+
+.card-front {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 0 0 8px #00ffee;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  color: #ccff00;
+  font-size: 0.95rem;
+  text-shadow: 0 0 8px #ff00ff;
+}
+/* 🧠 Scroll Progress Bar Styles */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 9999;
+  box-shadow: 0 0 10px #00ffee66;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #00ffee, #ff00ff);
+  box-shadow: 0 0 12px #00ffee, 0 0 30px #ff00ff;
+  transition: width 0.1s ease-out;
+}
+
+.scroll-text {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  font-size: 0.85rem;
+  color: #e6e609;
+  text-shadow: 0 0 5px #00ffee, 0 0 10px #ff00ff;
+  font-family: monospace;
+  z-index: 9999;
+}
+/* 🧬 Neural Core */
+.neural-core-section {
+  text-align: center;
+  padding: 100px 20px 60px;
+  position: relative;
+  background: radial-gradient(ellipse at center, #0a0a0a 0%, #000 100%);
+  overflow: hidden;
+}
+
+.neural-core {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00ffee 15%, transparent 70%);
+  box-shadow:
+    0 0 20px #00ffee,
+    0 0 40px #ff00ff,
+    0 0 60px #00ffee;
+  animation: spin 6s linear infinite, pulseCore 3s ease-in-out infinite;
+  position: relative;
+}
+
+.neural-core::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+  animation: rotateHalo 10s linear infinite;
+}
+
+.pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  background: rgba(255, 0, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulseWave 2s ease-in-out infinite;
+}
+
+.core-status {
+  margin-top: 40px;
+  color: #00ffee;
+  font-size: 1rem;
+  font-family: monospace;
+  text-shadow: 0 0 10px #00ffee;
+}
+
+.core-text {
+  color: #ff00ff;
+  font-weight: bold;
+  animation: flicker 4s infinite;
+}
+
+/* 🔁 Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseCore {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes rotateHalo {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseWave {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+/* 🧪 Fluxia AI Lab Section */
+.ai-lab {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #0a0a0a, #000);
+  text-align: center;
+}
+
+.lab-title {
+  font-size: 2rem;
+  color: #00ffee;
+  text-shadow: 0 0 12px #00ffee;
+  margin-bottom: 50px;
+  animation: pulseLab 2.5s infinite ease-in-out;
+}
+
+.lab-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lab-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00ffee33;
+  border-radius: 18px;
+  padding: 30px 20px;
+  box-shadow: 0 0 15px #00ffee44;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatIn 1.5s ease-out;
+}
+.lab-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ffee;
+}
+
+.lab-box h3 {
+  font-size: 1.2rem;
+  color: #00ffee;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px #00ffee;
+}
+
+.lab-box p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff00ff;
+  text-shadow: 0 0 12px #ff00ff;
+}
+
+/* 🔁 Animations */
+@keyframes pulseLab {
+  0% { text-shadow: 0 0 10px #00ffee; }
+  50% { text-shadow: 0 0 25px #00ffee; }
+  100% { text-shadow: 0 0 10px #00ffee; }
+}
+
+@keyframes floatIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/* 🎯 AI SKILL MATRIX */
+.ai-skills {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.matrix-title {
+  font-size: 2rem;
+  color: #00ffee;
+  margin-bottom: 40px;
+  text-shadow: 0 0 12px #00ffee;
+}
+
+.skill {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ff00ff;
+  text-shadow: 0 0 6px #ff00ff;
+}
+
+.bar {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00ffee22;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  position: relative;
+  box-shadow: 0 0 8px #00ffee33;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ffee, #ff00ff);
+  box-shadow: 0 0 10px #00ffee;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+.fill-100 { width: 100%; }
+.fill-70 { width: 70%; }
+.fill-60 { width: 60%; }
+/* ⏳ COUNTDOWN STYLES */
+.countdown-section {
+  text-align: center;
+  margin: 100px auto 80px;
+  color: #00ffee;
+  text-shadow: 0 0 12px #00ffee;
+}
+
+.countdown-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.countdown-timer {
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #00ffee;
+  border-radius: 12px;
+  display: inline-block;
+  animation: pulseTimer 2s infinite ease-in-out;
+  background: rgba(0, 255, 255, 0.05);
+  box-shadow: 0 0 15px #00ffee44;
+}
+
+@keyframes pulseTimer {
+  0% { box-shadow: 0 0 10px #00ffee44; }
+  50% { box-shadow: 0 0 25px #00ffeeaa; }
+  100% { box-shadow: 0 0 10px #00ffee44; }
+}
+
