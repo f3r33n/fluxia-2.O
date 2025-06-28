@@ -1,3 +1,6 @@
+
+
+
 /* style.css - Full Dopamine-Hitting, Glowing Masterpiece for Fluxia 2.0 */
 /* 🌌 Neural Galaxy Particle Background */
 .neural-galaxy {
@@ -1340,6 +1343,7 @@ a {
   50% { box-shadow: 0 0 25px #00ffeeaa; }
   100% { box-shadow: 0 0 10px #00ffee44; }
 }
+<<<<<<< HEAD
 /* 🌐 EverythingAI: Refined Version */
 .everything-ai {
   margin: 100px auto;
@@ -1952,3 +1956,6 @@ a {
   0%   { opacity: 0; transform: translateY(40px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+=======
+
+>>>>>>> da3c9b8cbae13e06e5a9ca424c4ad451e80235ae
