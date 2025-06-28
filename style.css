@@ -1,0 +1,1343 @@
+/* style.css - Full Dopamine-Hitting, Glowing Masterpiece for Fluxia 2.0 */
+/* 🌌 Neural Galaxy Particle Background */
+.neural-galaxy {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #0a0a0a, #000000);
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #00ffee;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ffeeaa, 0 0 16px #00ffee66;
+  animation: float 20s infinite linear;
+}
+
+.particle:nth-child(1) {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  top: 40%;
+  left: 80%;
+  animation-delay: 2s;
+}
+
+.particle:nth-child(3) {
+  top: 60%;
+  left: 25%;
+  animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+  top: 70%;
+  left: 55%;
+  animation-delay: 6s;
+}
+
+.particle:nth-child(5) {
+  top: 30%;
+  left: 70%;
+  animation-delay: 8s;
+}
+
+.particle:nth-child(6) {
+  top: 50%;
+  left: 45%;
+  animation-delay: 10s;
+}
+
+.particle:nth-child(7) {
+  top: 75%;
+  left: 15%;
+  animation-delay: 12s;
+}
+
+.particle:nth-child(8) {
+  top: 10%;
+  left: 90%;
+  animation-delay: 14s;
+}
+
+.particle:nth-child(9) {
+  top: 85%;
+  left: 35%;
+  animation-delay: 16s;
+}
+
+.particle:nth-child(10) {
+  top: 15%;
+  left: 50%;
+  animation-delay: 18s;
+}
+
+/* Particle Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* 🧼 RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: repeating-linear-gradient(45deg, #0d0d0d, #0d0d0d 20px, #111111 20px, #111111 40px);
+  color: #ffffff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 💫 Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+/* 💫 Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&display=swap');
+
+/* 🔥 HERO SECTION REFINED */
+.hero {
+  text-align: center;
+  padding: 120px 20px 80px;
+  background: linear-gradient(to right, #0d0d0d, #111111);
+  animation: fadeInUp 1s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title-box {
+  margin-bottom: 50px;
+}
+
+/* 🌐 FLUXIA RING + TITLE */
+.fluxia-ring {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.fluxia-glow {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5rem;
+  color: #00ffee;
+  text-shadow: 0 0 12px #00ffee, 0 0 30px #00ffee;
+  z-index: 2;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+
+.fluxia-glow:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 14px #ff00ff, 0 0 28px #ff00ff;
+}
+
+.rotating-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px dashed #00ffee;
+  animation: rotate 8s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 30px #00ffee80;
+}
+
+/* 🧠 Glowing Box Tagline */
+.tagline-wrapper {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 20px 40px;
+  border: 1px solid #00ffee;
+  border-radius: 30px;
+  box-shadow: 0 0 20px #00ffee80, inset 0 0 10px #00ffee40;
+  background: rgba(0, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  animation: textGlow 3s infinite ease-in-out;
+}
+
+.highlight-ai {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6rem;
+  color: #00ffee;
+  margin-right: 10px;
+  text-shadow: 0 0 8px #00ffee;
+}
+
+.highlight-tool {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ff00ff;
+  text-shadow: 0 0 12px #ff00ff, 0 0 25px #ff00ff;
+}
+
+/* 🔄 Animations */
+@keyframes rotate {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes textGlow {
+  0% { box-shadow: 0 0 20px #00ffee60; }
+  100% { box-shadow: 0 0 30px #00ffeea0, inset 0 0 15px #00ffee60; }
+}
+/* 🚀 Buzzword Carousel */
+.buzzword-carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 30px auto;
+  padding: 10px 0;
+  width: 100%;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(6px);
+}
+
+.buzzword-track {
+  display: inline-block;
+  animation: scrollLeft 20s linear infinite;
+}
+
+.buzzword-track span {
+  display: inline-block;
+  padding: 0 30px;
+  font-size: 1.1rem;
+  color: #00ffee;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 8px #00ffee;
+  animation: glowFlicker 4s infinite;
+}
+
+/* ✨ Animations */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes glowFlicker {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 8px #00ffee;
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 16px #00ffeeaa;
+  }
+}
+/* 💡 Fluxia 2.0 Info Cards — Refined with Color Glow */
+.fluxia-info-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-card {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 30px 25px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1), inset 0 0 5px rgba(255, 255, 255, 0.03);
+  color: #ffffff;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.4s ease, border 0.4s ease;
+  animation: fadeInFloat 1s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.info-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  border: 1px solid #00ffee;
+  box-shadow: 0 0 35px #b45b17aa, 0 0 25px #ff00ff55;
+}
+
+/* ✨ Unique heading colors per card */
+.info-card:nth-child(1) h3 {
+  color: #9fe01d;
+  text-shadow: 0 0 10px #a2ff00, 0 0 20px #b0dd4580;
+}
+
+.info-card:nth-child(2) h3 {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff80;
+}
+
+.info-card:nth-child(3) h3 {
+  color: #9a6dff;
+  text-shadow: 0 0 10px #9a6dff, 0 0 20px #9a6dff88;
+}
+
+.info-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: #dddddd;
+  line-height: 1.6;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.05);
+}
+
+/* 🔄 Animation */
+@keyframes fadeInFloat {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* ✨ Tagline Badges */
+.tagline-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.tag-badge {
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 50px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid #00ffee;
+  box-shadow: 0 0 12px #00ffee;
+  text-shadow: 0 0 5px #00ffee;
+  transition: all 0.3s ease;
+  animation: glowPulse 2s infinite ease-in-out;
+  backdrop-filter: blur(6px);
+}
+
+.tag-badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ffee, 0 0 40px #00ffee;
+}
+
+.main-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.fluxia {
+  color: #00ffee;
+  text-shadow: 0 0 10px #00ffee, 0 0 30px #00ffee;
+}
+.ai-text {
+  color: #ffffff;
+  font-size: 2.4rem;
+  text-shadow: 0 0 8px #666;
+}
+.toolstack {
+  font-size: 3.2rem;
+  color: #ff00ff;
+  font-weight: 700;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff33ff;
+}
+
+.tagline-box {
+  margin: 25px auto;
+  padding: 20px 30px;
+  border: 2px solid #00ffee;
+  background-color: rgba(0, 255, 255, 0.1);
+  display: inline-block;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffee;
+  animation: glowPulse 2.5s infinite ease-in-out;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.cta-button {
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #00ffee, #00b7ff);
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px #00ffee;
+}
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #00ffee;
+}
+
+/* 🧠 TOOL SECTION - Refined */
+.tool-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.tool-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #00ffee;
+  text-shadow: 0 0 15px #00ffee;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.tool-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 25px;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+
+  /* FIX: prevent overflow issues */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tool-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.25) 0%, transparent 70%);
+  transform: rotate(45deg);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.tool-card:hover::before {
+  opacity: 1;
+}
+
+.tool-card:hover {
+  transform: scale(1.05);
+  border-color: #00ffee;
+  box-shadow: 0 0 35px #00ffee;
+  z-index: 10;
+}
+
+/* 💎 Better color contrast and glow */
+.tool-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #a5f3fc;
+  text-shadow: 0 0 10px #00ffee88;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tool-card p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+/* 🔗 Button - glowing effect */
+.visit-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: linear-gradient(to right, #00ffee, #ff00ff);
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.visit-btn:hover {
+  box-shadow: 0 0 20px #00ffee;
+  transform: scale(1.1);
+  background: linear-gradient(to right, #ff00ff, #00ffee);
+}
+
+/* 🔄 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* 🌌 Timeline Section */
+.timeline-section {
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.timeline-title {
+  font-size: 2.2rem;
+  color: #ff00ff;
+  text-shadow: 0 0 15px #ff00ff;
+  animation: pulseGlow 3s infinite ease-in-out;
+  margin-bottom: 60px;
+}
+
+/* Timeline Wrapper with Horizontal Line */
+.timeline-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 30px 0;
+  scroll-behavior: smooth;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #00ffee, #ff00ff);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Individual Items */
+.timeline-item {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  flex: 0 0 160px;
+}
+
+/* Glowing Dot */
+.dot {
+  width: 40px;
+  height: 40px;
+  background: #111;
+  border: 2px solid #00ffee;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ffee;
+  font-size: 1.3rem;
+  box-shadow: 0 0 20px #00ffeeaa, 0 0 40px #00ffee55;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.dot:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 30px #ff00ffcc;
+}
+
+/* Tooltip */
+.dot::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #00ffee;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 10;
+}
+
+.dot:hover::after {
+  opacity: 1;
+}
+
+/* Text Card */
+.event {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #00ffee44;
+  padding: 12px 10px;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px #00ffee33;
+  font-size: 0.9rem;
+}
+
+.event h3 {
+  color: #00ffee;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.event p {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+/* Pulse effect */
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #ff00ff;
+  }
+  50% {
+    text-shadow: 0 0 25px #ff00ff;
+  }
+}
+
+/* 🌐 TECH SITE CTA */
+.tech-site-cta {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #00ffee;
+  padding: 40px;
+  margin: 60px auto;
+  text-align: center;
+  border-radius: 20px;
+  max-width: 900px;
+  box-shadow: 0 0 25px #00ffee;
+  animation: fadeIn 1.2s ease-in-out;
+}
+.tech-site-cta h2 {
+  color: #00ffee;
+  margin-bottom: 15px;
+  text-shadow: 0 0 12px #00ffee;
+}
+.tech-site-cta p {
+  color: #ccc;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+.special-btn {
+  background: linear-gradient(90deg, #ff00ff, #00ffee);
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 20px #ff00ff;
+}
+.special-btn:hover {
+  box-shadow: 0 0 30px #ff00ff;
+  transform: scale(1.1);
+}
+
+/* 🤝 TRUSTED BY */
+.trusted-by {
+  text-align: center;
+  margin: 60px auto;
+}
+.trusted-by h3 {
+  color: #ff00ff;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  text-shadow: 0 0 12px #ff00ff;
+}
+.trusted-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.trusted-icons img {
+  height: 50px;
+  filter: drop-shadow(0 0 10px #00ffee);
+  transition: transform 0.3s ease;
+}
+.trusted-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* 👣 FOOTER */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #777;
+  font-size: 0.95rem;
+  background-color: #0f0f0f;
+}
+.footer a {
+  color: #00ffee;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+
+/* ✨ ANIMATIONS */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 15px #00ffee; }
+  50% { box-shadow: 0 0 35px #00ffee; }
+  100% { box-shadow: 0 0 15px #00ffee; }
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 600px) {
+  .main-title { font-size: 2rem; }
+  .toolstack { font-size: 2.4rem; }
+  .tech-site-cta { padding: 20px; }
+  .cta-button { margin-top: 15px; }
+}
+
+/* 🌟 Testimonials Section - Circular Glowing Boxes */
+.testimonials-section {
+  max-width: 1100px;
+  margin: 100px auto 80px;
+  padding: 0 20px;
+  text-align: center;
+}
+.testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-box {
+  width: 240px;
+  height: 240px;
+  margin: auto;
+  background: radial-gradient(circle, rgba(255, 0, 255, 0.1), rgba(0, 0, 0, 0.3));
+  border: 2px solid #ff00ff;
+  border-radius: 50%;
+  padding: 30px 20px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  box-shadow: 0 0 25px #ff00ff60, inset 0 0 10px #ff00ff40;
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  animation: floatIn 1.2s ease-out, flicker 4s infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.testimonial-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px #ff00ffcc;
+}
+
+.testimonial-box p {
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.testimonial-box span {
+  font-size: 0.85rem;
+  color: #cccccc;
+  font-style: italic;
+}
+
+/* ✨ Animations */
+@keyframes pulseGlow {
+  0% { text-shadow: 0 0 10px #ff00ff; }
+  50% { text-shadow: 0 0 25px #ff00ff; }
+  100% { text-shadow: 0 0 10px #ff00ff; }
+}
+
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.8;
+  }
+}
+
+/* 🌀 Explore Fluxia 1.0 Promo */
+.fluxia1-promo {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
+  border-radius: 100px;
+  background: radial-gradient(circle at top left, #ff00ff40, #00ffee20);
+  border: 2px dashed #ff00ff;
+  text-align: center;
+  box-shadow: 0 0 30px #ff00ff50, inset 0 0 15px #00ffee60;
+  animation: glowFade 6s infinite alternate ease-in-out;
+  backdrop-filter: blur(8px);
+}
+
+.fluxia1-promo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ff00ff;
+  text-shadow: 0 0 12px #ff00ff;
+}
+
+.fluxia1-promo p {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.fluxia1-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(90deg, #00ffee, #ff00ff);
+  color: #000;
+  font-weight: bold;
+  border-radius: 50px;
+  text-shadow: none;
+  box-shadow: 0 0 20px #00ffee;
+  transition: all 0.3s ease;
+}
+.fluxia1-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px #ff00ff;
+}
+
+/* Glowing animation */
+@keyframes glowFade {
+  0% {
+    box-shadow: 0 0 20px #00ffee80, inset 0 0 10px #ff00ff50;
+  }
+  100% {
+    box-shadow: 0 0 40px #ff00ff80, inset 0 0 20px #00ffee50;
+  }
+}
+/* 🎧 Fluxia AI Soundwave */
+.soundwave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+  height: 50px;
+  position: relative;
+}
+
+.soundwave span {
+  width: 6px;
+  height: 40px;
+  background: linear-gradient(to top, #00ffee, #ff00ff);
+  border-radius: 8px;
+  animation: wavePulse 1s infinite ease-in-out;
+  box-shadow: 0 0 10px #00ffee88, 0 0 20px #ff00ff44;
+}
+
+/* 🎶 Staggered delay for wave bars */
+.soundwave span:nth-child(1) {
+  animation-delay: 0s;
+}
+.soundwave span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.soundwave span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.soundwave span:nth-child(4) {
+  animation-delay: 0.45s;
+}
+.soundwave span:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+/* 🎵 Keyframes for Pulse */
+@keyframes wavePulse {
+  0%, 100% {
+    height: 20px;
+    opacity: 0.6;
+  }
+  50% {
+    height: 50px;
+    opacity: 1;
+  }
+}
+
+/* Optional Caption */
+.sound-caption {
+  text-align: center;
+  font-size: 1rem;
+  color: #00ffee;
+  text-shadow: 0 0 6px #00ffee;
+  margin-top: 10px;
+  animation: pulseCaption 3s infinite ease-in-out;
+}
+
+@keyframes pulseCaption {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+/* 🧠 FLUXIA LIVE MAP */
+.live-map-section {
+  text-align: center;
+  margin: 80px auto;
+  padding: 30px 20px;
+  max-width: 900px;
+}
+
+.live-map-section h2 {
+  color: #00ffee;
+  text-shadow: 0 0 8px #00ffee;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+}
+
+.live-map {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.node {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #00ffee;
+  box-shadow: 0 0 12px #00ffeeaa;
+  animation: pulseNode 3s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+/* Random delays for natural vibe */
+.node:nth-child(3n) { animation-delay: 0.5s; }
+.node:nth-child(5n) { animation-delay: 1s; }
+.node:nth-child(7n) { animation-delay: 1.5s; }
+.node:nth-child(9n) { animation-delay: 2s; }
+.node:nth-child(11n) { animation-delay: 2.5s; }
+
+/* Keyframes for pulse animation */
+@keyframes pulseNode {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 1;
+    box-shadow: 0 0 25px #00ffee, 0 0 50px #00ffee88;
+  }
+}
+/* 🔮 AI Insight Cards */
+.insight-section {
+  padding: 80px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.insight-section h2 {
+  font-size: 2rem;
+  color: #00ffee;
+  text-shadow: 0 0 10px #00ffee;
+  margin-bottom: 50px;
+  animation: pulseGlow 3s infinite;
+}
+
+.insight-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.insight-card {
+  width: 240px;
+  height: 160px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s ease;
+  transform-style: preserve-3d;
+}
+
+.insight-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #00ffee55;
+  backdrop-filter: blur(8px);
+}
+
+.card-front {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 0 0 8px #00ffee;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  color: #ccff00;
+  font-size: 0.95rem;
+  text-shadow: 0 0 8px #ff00ff;
+}
+/* 🧠 Scroll Progress Bar Styles */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 9999;
+  box-shadow: 0 0 10px #00ffee66;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #00ffee, #ff00ff);
+  box-shadow: 0 0 12px #00ffee, 0 0 30px #ff00ff;
+  transition: width 0.1s ease-out;
+}
+
+.scroll-text {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  font-size: 0.85rem;
+  color: #e6e609;
+  text-shadow: 0 0 5px #00ffee, 0 0 10px #ff00ff;
+  font-family: monospace;
+  z-index: 9999;
+}
+/* 🧬 Neural Core */
+.neural-core-section {
+  text-align: center;
+  padding: 100px 20px 60px;
+  position: relative;
+  background: radial-gradient(ellipse at center, #0a0a0a 0%, #000 100%);
+  overflow: hidden;
+}
+
+.neural-core {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00ffee 15%, transparent 70%);
+  box-shadow:
+    0 0 20px #00ffee,
+    0 0 40px #ff00ff,
+    0 0 60px #00ffee;
+  animation: spin 6s linear infinite, pulseCore 3s ease-in-out infinite;
+  position: relative;
+}
+
+.neural-core::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+  animation: rotateHalo 10s linear infinite;
+}
+
+.pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  background: rgba(255, 0, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulseWave 2s ease-in-out infinite;
+}
+
+.core-status {
+  margin-top: 40px;
+  color: #00ffee;
+  font-size: 1rem;
+  font-family: monospace;
+  text-shadow: 0 0 10px #00ffee;
+}
+
+.core-text {
+  color: #ff00ff;
+  font-weight: bold;
+  animation: flicker 4s infinite;
+}
+
+/* 🔁 Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseCore {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes rotateHalo {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseWave {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+/* 🧪 Fluxia AI Lab Section */
+.ai-lab {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #0a0a0a, #000);
+  text-align: center;
+}
+
+.lab-title {
+  font-size: 2rem;
+  color: #00ffee;
+  text-shadow: 0 0 12px #00ffee;
+  margin-bottom: 50px;
+  animation: pulseLab 2.5s infinite ease-in-out;
+}
+
+.lab-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.lab-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00ffee33;
+  border-radius: 18px;
+  padding: 30px 20px;
+  box-shadow: 0 0 15px #00ffee44;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatIn 1.5s ease-out;
+}
+.lab-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ffee;
+}
+
+.lab-box h3 {
+  font-size: 1.2rem;
+  color: #00ffee;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px #00ffee;
+}
+
+.lab-box p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff00ff;
+  text-shadow: 0 0 12px #ff00ff;
+}
+
+/* 🔁 Animations */
+@keyframes pulseLab {
+  0% { text-shadow: 0 0 10px #00ffee; }
+  50% { text-shadow: 0 0 25px #00ffee; }
+  100% { text-shadow: 0 0 10px #00ffee; }
+}
+
+@keyframes floatIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/* 🎯 AI SKILL MATRIX */
+.ai-skills {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.matrix-title {
+  font-size: 2rem;
+  color: #00ffee;
+  margin-bottom: 40px;
+  text-shadow: 0 0 12px #00ffee;
+}
+
+.skill {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ff00ff;
+  text-shadow: 0 0 6px #ff00ff;
+}
+
+.bar {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00ffee22;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  position: relative;
+  box-shadow: 0 0 8px #00ffee33;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ffee, #ff00ff);
+  box-shadow: 0 0 10px #00ffee;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+
+.fill-100 { width: 100%; }
+.fill-70 { width: 70%; }
+.fill-60 { width: 60%; }
+/* ⏳ COUNTDOWN STYLES */
+.countdown-section {
+  text-align: center;
+  margin: 100px auto 80px;
+  color: #00ffee;
+  text-shadow: 0 0 12px #00ffee;
+}
+
+.countdown-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.countdown-timer {
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #00ffee;
+  border-radius: 12px;
+  display: inline-block;
+  animation: pulseTimer 2s infinite ease-in-out;
+  background: rgba(0, 255, 255, 0.05);
+  box-shadow: 0 0 15px #00ffee44;
+}
+
+@keyframes pulseTimer {
+  0% { box-shadow: 0 0 10px #00ffee44; }
+  50% { box-shadow: 0 0 25px #00ffeeaa; }
+  100% { box-shadow: 0 0 10px #00ffee44; }
+}
