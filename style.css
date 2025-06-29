@@ -1,6 +1,3 @@
-
-
-
 /* style.css - Full Dopamine-Hitting, Glowing Masterpiece for Fluxia 2.0 */
 /* 🌌 Neural Galaxy Particle Background */
 .neural-galaxy {
@@ -259,6 +256,69 @@ a {
     text-shadow: 0 0 16px #00ffeeaa;
   }
 }
+/* 🌟 Topics Covered Section - Refined */
+.topics-covered {
+  padding: 70px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #0c0c0c, #141414);
+  animation: fadeInUp 1.2s ease;
+}
+
+.topics-title {
+  font-size: 2.2rem;
+  color: #16cae6;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px rgba(240, 13, 138, 0.3);
+  font-weight: 600;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 22px;
+  justify-content: center;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.topic-box {
+  padding: 12px 20px;
+  background: linear-gradient(145deg, rgba(243, 91, 10, 0.04), rgba(250, 250, 250, 0.01));
+  border: 1px solid rgba(215, 21, 21, 0.08);
+  border-radius: 14px;
+  color: #1a92ba;
+  font-size: 0.96rem;
+  box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.02), 0 0 8px rgba(0, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease, box-shadow 0.5s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.topic-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(180, 255, 255, 0.05) 0%, transparent 70%);
+  transform: rotate(30deg);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.topic-box:hover::before {
+  opacity: 1;
+}
+
+.topic-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 16px rgba(180, 255, 255, 0.15);
+  background: linear-gradient(145deg, rgba(90, 255, 255, 0.07), rgba(250, 250, 250, 0.02));
+}
+
 /* 💡 Fluxia 2.0 Info Cards — Refined with Color Glow */
 .fluxia-info-section {
   display: flex;
@@ -1343,84 +1403,101 @@ a {
   50% { box-shadow: 0 0 25px #00ffeeaa; }
   100% { box-shadow: 0 0 10px #00ffee44; }
 }
-<<<<<<< HEAD
-/* 🌐 EverythingAI: Refined Version */
+/* 🌐 EverythingAI: Refined & Dopamine-Optimized */
 .everything-ai {
   margin: 100px auto;
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
   background: linear-gradient(to right, #0e0e0e, #101010);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  animation: sectionFadeIn 1.2s ease;
 }
 
+/* Glowing Heading */
 .section-heading {
   font-size: 2.5rem;
   color: #00ffee;
-  text-shadow: 0 0 18px #00ffee;
-  margin-bottom: 40px;
+  text-shadow: 0 0 15px #00ffee, 0 0 30px #00ffee77;
+  margin-bottom: 50px;
   animation: glowPop 2s ease-in-out infinite;
 }
 
+/* Responsive Grid */
 .ai-site-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-content: center;
 }
 
+/* AI Site Cards */
 .ai-site-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 255, 255, 0.04);
-  border: 1px solid #00ffee40;
-  border-radius: 16px;
-  padding: 20px;
+  border: 1px solid #00ffee30;
+  border-radius: 18px;
+  padding: 25px 18px;
+  max-width: 240px;
   text-align: center;
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.08);
   backdrop-filter: blur(6px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: floatIn 1s ease-out;
-  max-width: 230px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  animation: floatIn 1.1s ease;
 }
 
 .ai-site-box:hover {
   transform: scale(1.07);
   box-shadow: 0 0 25px #00ffee;
+  border: 1px solid #00ffeeaa;
 }
 
+/* Logos */
 .ai-site-box img {
   max-width: 60px;
   height: auto;
-  margin-bottom: 10px;
-  filter: brightness(1.1) drop-shadow(0 0 5px #00ffeeaa);
+  margin-bottom: 15px;
+  filter: brightness(1.1) drop-shadow(0 0 6px #00ffee99);
+  transition: transform 0.3s ease;
+}
+.ai-site-box:hover img {
+  transform: scale(1.1);
 }
 
+/* Title Text */
 .ai-site-box h3 {
   color: #00ffee;
-  font-size: 1.1rem;
-  margin-bottom: 6px;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  animation: entryFade 1.2s ease;
 }
 
+/* Fun Fact / Description */
 .ai-site-box p {
-  font-size: 0.85rem;
-  color: #aaa;
-  margin-bottom: 15px;
+  font-size: 0.88rem;
+  color: #bbbbbb;
+  margin-bottom: 18px;
+  line-height: 1.4;
 }
 
+/* Visit Button */
 .ai-site-box a {
   display: inline-block;
-  padding: 8px 14px;
+  padding: 9px 16px;
   background: linear-gradient(to right, #00ffee, #00b7ff);
   color: #000;
   font-weight: 600;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 0.85rem;
+  border-radius: 12px;
+  font-size: 0.88rem;
   transition: all 0.3s ease;
 }
-
 .ai-site-box a:hover {
   background: #00e7ff;
-  box-shadow: 0 0 15px #00ffee;
-  transform: scale(1.05);
+  box-shadow: 0 0 16px #00ffee;
+  transform: scale(1.08);
 }
 
 /* Title animation */
@@ -1428,18 +1505,24 @@ a {
   animation: entryFade 1.5s ease-out;
 }
 
+/* ---------- Animations ---------- */
 @keyframes glowPop {
   0%, 100% { text-shadow: 0 0 10px #00ffee; }
   50% { text-shadow: 0 0 25px #00ffee; }
 }
 
 @keyframes floatIn {
-  0% { opacity: 0; transform: translateY(20px); }
+  0% { opacity: 0; transform: translateY(25px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes entryFade {
   from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sectionFadeIn {
+  from { opacity: 0; transform: translateY(40px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 /* 🎓 Free AI Courses Section */
@@ -1956,6 +2039,213 @@ a {
   0%   { opacity: 0; transform: translateY(40px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-=======
+/* 🌐 AI Application Map */
+.ai-map {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #0d0d0d, #111);
+  text-align: center;
+}
 
->>>>>>> da3c9b8cbae13e06e5a9ca424c4ad451e80235ae
+.ai-map-title {
+  font-size: 2.4rem;
+  color: #00ffee;
+  text-shadow: 0 0 12px #00ffee88;
+  margin-bottom: 50px;
+  animation: glowPop 2s infinite ease-in-out;
+}
+
+.ai-map-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.ai-map-card {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, #0ff2ff15, #0ff2ff05);
+  border: 1px solid #00ffee40;
+  box-shadow: 0 0 10px #00ffee33;
+  color: #ffffffcc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-map-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #00ffeeaa;
+  background: radial-gradient(circle at top right, #00ffee11, #00ffee05);
+  color: #ffffff;
+}
+
+.ai-map-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #00ffee;
+  text-shadow: 0 0 8px #00ffee66;
+}
+
+.ai-map-card p {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Reuse glow animation */
+@keyframes glowPop {
+  0%, 100% { text-shadow: 0 0 10px #00ffee; }
+  50% { text-shadow: 0 0 25px #00ffee; }
+}
+/* 🧭 Fluxia Flow Journey Styles (Orange Glow Version) */
+.fluxia-journey {
+  padding: 70px 20px;
+  background: linear-gradient(to bottom, #0a0a0a, #131313);
+  text-align: center;
+}
+
+.journey-title {
+  font-size: 2.2rem;
+  color: #ff9900;
+  margin-bottom: 50px;
+  text-shadow: 0 0 18px #ff9900aa;
+  animation: orangePulse 2s ease-in-out infinite;
+}
+
+.journey-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.step-circle {
+  background: rgba(255, 140, 0, 0.06);
+  border: 2px solid rgba(255, 153, 0, 0.4);
+  color: #ffffff;
+  padding: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(255, 153, 0, 0.15);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.step-circle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px #ff9900aa;
+}
+
+.step-circle span {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+  color: #ff9900;
+}
+
+.step-connector {
+  width: 30px;
+  height: 4px;
+  background: #ff990055;
+  border-radius: 4px;
+  animation: connectorOrangeGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes orangePulse {
+  0%, 100% { text-shadow: 0 0 10px #ff9900; }
+  50% { text-shadow: 0 0 22px #ff9900; }
+}
+
+@keyframes connectorOrangeGlow {
+  from { background-color: #ff990030; }
+  to { background-color: #ff990088; }
+}
+
+
+/* 🔮 AI Prediction Cards Styling */
+.ai-predictions {
+  margin-top: 100px; 
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #0b0b0b, #111111);
+  text-align: center;
+}
+
+.prediction-title {
+  font-size: 2.2rem;
+  color: #ff9900;
+  margin-bottom: 50px;
+  text-shadow: 0 0 18px #ff9900aa;
+  animation: orangePulse 2s ease-in-out infinite;
+}
+
+.prediction-card-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.flip-card {
+  background: transparent;
+  width: 240px;
+  height: 140px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 140, 0, 0.05);
+  border: 1px solid rgba(255, 153, 0, 0.4);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 153, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.flip-front {
+  z-index: 2;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  color: #ff9900;
+}
