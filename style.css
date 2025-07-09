@@ -2553,3 +2553,10 @@ a {
     font-size: 0.8rem;
   }
 }
+/* 💡 Scroll Glitch Fix */
+html, body {
+  height: auto !important;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
