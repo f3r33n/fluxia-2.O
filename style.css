@@ -810,7 +810,7 @@ a {
 @media (max-width: 600px) {
   .main-title { font-size: 2rem; }
   .toolstack { font-size: 2.4rem; }
-  .tech-site-cta { padding: 20px; }
+  .tech-site-cta { padding: 20px; }-
   .cta-button { margin-top: 15px; }
 }
 
@@ -2559,4 +2559,18 @@ html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   overscroll-behavior: contain;
+}
+@media (max-width: 768px) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .neural-galaxy,
+  .cursor-trail,
+  .glowPop,
+  .floatIn,
+  .timeline-line {
+    display: none !important;
+  }
 }
