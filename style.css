@@ -2482,3 +2482,74 @@ a {
   0%, 100% { text-shadow: 0 0 10px rgba(255, 200, 100, 0.5); }
   50% { text-shadow: 0 0 22px rgba(255, 200, 100, 0.8); }
 }
+/* 🌐 Responsive Mobile Fixes (Fluxia 2.0) */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .ai-site-grid,
+  .tool-grid,
+  .card-grid,
+  .prediction-grid,
+  .topics-grid,
+  .insight-boxes {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+  }
+
+  .ai-site-box,
+  .tool-card,
+  .timeline-item,
+  .flip-card,
+  .pulse-node,
+  .journey-step {
+    max-width: 95%;
+    margin: 0 auto;
+    transform: none !important;
+    scale: 1 !important;
+  }
+
+  .nav-toggle {
+    top: 10px;
+    right: 10px;
+    scale: 0.9;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .neural-core,
+  .timeline-section,
+  .everything-ai {
+    padding: 30px 10px;
+  }
+
+  .insight-card p,
+  .ai-site-box p,
+  .tool-card p {
+    font-size: 0.8rem;
+  }
+
+  .cursor-trail {
+    display: none !important; /* Disable heavy effects on mobile */
+  }
+
+  .footer {
+    padding: 20px;
+    font-size: 0.8rem;
+  }
+}
